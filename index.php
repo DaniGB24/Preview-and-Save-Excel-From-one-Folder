@@ -56,10 +56,6 @@
     <br><br>    
       <input type="submit" name="submit" class="ui blue toggle button" value="Preview">
 
- 
-      
-
-
     </div>
     </center>
   </div>
@@ -82,7 +78,7 @@
             //    menghitung jumlah baris file xls
                   $baris = $data->rowcount($sheet_index=0);
               
-                  echo "<table border = '1'>
+                  echo "<table border = '2'>
         
           <tbody>";
 
@@ -97,7 +93,7 @@
                   $univ          = $data->val($i, 4,0);
                   $prodi         = $data->val($i, 5,0);
                   echo "<tr>
-                <th>".$nim."</th>
+                  <th>".$nim."</th>
                   <th>".$nama."</th>
                   <th>".$prov."</th>
                   <th>".$univ."</th>
@@ -114,9 +110,9 @@
                   $nama          = $data->val($i, 2,0);
                   $prov          = $data->val($i, 3,0);
                   $univ          = $data->val($i, 4,0);
-                  $prodi       = $data->val($i, 5,0);
+                  $prodi         = $data->val($i, 5,0);
                   echo "<tr>
-                <td>".$nim."</th>
+                  <td>".$nim."</th>
                   <td>".$nama."</td>
                   <td>".$prov."</td>
                   <td>".$univ."</td>
@@ -129,12 +125,9 @@
                         univ,
                         prodi)values('$nim','$nama','$prov','$univ','$prodi')";
                   $hasil = mysql_query($query);
-            //      setelah data dibaca, masukkan ke tabel pegawai sql
+            //      setelah data dibaca, masukkan ke tabel 
                 }
                 
-                
-                
-            //    hapus file xls yang udah dibaca
                 
             
           echo "</tbody>
